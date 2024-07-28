@@ -1,5 +1,5 @@
 FROM node:20-slim
 WORKDIR /var/task
-COPY . /
-RUN npm ci
+COPY . /var/task
+RUN npm install
 CMD ["npm", "start"]
