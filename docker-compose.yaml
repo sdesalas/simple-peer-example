@@ -1,0 +1,13 @@
+# Restart after updates
+#    $ git pull
+#    $ docker-compose up --build
+#
+version: '3.7'
+
+services:
+  rocky_server:
+    build:
+      context: .
+    ports:
+      - 5001:5001
+    restart: unless-stopped
